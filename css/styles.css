@@ -1,0 +1,512 @@
+:root {
+    --palette-color-900: rgb(247,94,94);
+    --palette-color-700: rgb(242,225,225);
+    --palette-color-500: rgb(176,40,40);
+    --palette-color-400: hsl(180, 39%, 40%);
+    --palette-color-300: rgb(120,196,196);
+    --palette-color-100: rgb(255,255,255);
+}
+
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+sup {
+    position: relative;
+    vertical-align: baseline;
+    top: -0.4em;
+}
+
+#homePage {
+	background: rgba(170,170,170,1);
+	color: rgba(255,255,255,1);
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+}
+#homePage main {
+	position: relative;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	height: 100%;
+	min-height: 100%;
+	background: rgba(0, 0, 0, 1);
+	padding: 50px;
+	top: 0;
+	box-shadow: 0 0 30px 30px rgb(85, 85, 85);
+}
+#homePage header {
+    display: flex;
+} 
+#homePage header h1 {
+    font-size: 18px;
+    margin: 0;
+}
+#homePage header img {
+	height: 50px;
+	width: 50px;
+    margin-right: 15px;
+}
+#projects {
+	position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+}
+#projects ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#projects li {
+    margin: 1em 0.25em;
+    height: 100%;
+    min-width: 8em;
+    max-width: 12em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    line-height: 3em;
+}
+
+.projectLinks {
+    padding: 1em;
+    background: rgba(31, 97, 141,1);
+    font-weight: 100;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 160px;
+    max-height: 25px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    line-height: 1em;
+}
+
+.projectLinks svg {
+    height: 3em;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+  
+.projectLinks rect {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+}
+
+.projectLinks:hover {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.projectLinks:hover rect {
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* start of Project 1 styling */
+#project1 {
+    background-color: var(--palette-color-100);
+    color: var(--palette-color-900);
+    font-family: 'Nunito Sans', sans-serif;
+    min-width: 320px;
+}
+
+#project1 * {
+    box-sizing: border-box;
+}
+
+#project1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#project1 main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#project1 nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3em;
+    background-color: var(--palette-color-100);
+}
+
+#project1 nav > ul li {
+    position: relative;
+    padding: 0 1em;
+    border: 1px solid var(--palette-color-900);
+    margin: 0 0.125em;
+    border-bottom: 0;
+    border-radius: 0.25em 0.25em 0 0;
+}
+
+#project1 nav > ul {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    margin-left: 1em;
+    height: 2em;
+    line-height: 2em;
+    font-weight: 700;
+    letter-spacing: 0.0625em;
+}
+#project1 nav li > ul {
+    position: absolute;
+    bottom: 0;
+    left: 80%;
+    background: var(--palette-color-400);
+    list-style: none;
+    margin: 0 0 0 1em;
+    padding: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 150ms ease-in-out;
+}
+#project1 nav li > ul li {
+    border: 0;
+}
+#project1 nav li:hover > ul, #project1 nav li:focus > ul {
+    transform: scale(1);
+}
+#project1 nav li > ul li:hover, #project1 nav li > ul li:focus {
+    background: var(--palette-color-300);
+    color: var(--palette-color-900);
+}
+
+#project1 .active {
+    background: var(--palette-color-900);
+    color: var(--palette-color-100);
+    transform: scale(1);
+}
+
+#project1 header {
+    padding-top: 3em;
+    position: absolute;
+    left: 0;
+    background-color: var(--palette-color-900);
+    width: 100vw;
+}
+
+#project1 header h1, #project header nav ul {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#project1 header h1 {
+    width: 100%;
+    padding: 0.5em;
+    padding-left: 1em;
+    color: var(--palette-color-100);
+}
+#project1 header h2 {
+    margin: 1em;
+}
+#project1 h3{
+    color: var(--palette-color-400);
+}
+
+#project1 section:first-of-type {
+    padding-top: 7.75em;
+    padding-left: 2em;
+    width: 100%;
+}
+
+#project1 .twoColumns {
+    padding: 0 1em;
+}
+
+#project1 .twoColumns h2{
+    grid-area: h2;
+}
+
+#project1 article * {
+    margin: 0;
+    padding: 0;
+}
+#project1 article > * {
+    padding: 0 1em;
+}
+
+#project1 article {
+    background-color: var(--palette-color-100);
+    margin: 1em auto;
+    border: var(--palette-color-900) solid 0.125em;
+    border-radius: 0.25em;
+    box-shadow: 8px 8px 15px var(--palette-color-900);
+    min-width: 250px;
+    max-width: 50ch;
+    width: 100%;
+}
+
+#project1 article h3 {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    background: var(--palette-color-300);
+    color: var(--palette-color-100);
+    border-bottom-style: solid;
+    border-color: inherit;
+    border-bottom-width: inherit;
+    font-weight: 800;
+    letter-spacing: 0.0625em;
+    font-size: 22px;
+}
+
+#project1 article h4 {
+    color: var(--palette-color-400);
+}
+
+#project1 article p {
+    margin: 0.5em 0;
+    text-indent: 2em;
+}
+
+#project1 article ol, #project1 article ul{
+    margin: 0 2em;
+}
+
+#project1 article li, #project1 article li {
+    margin: 0.5em 0;
+}
+
+#project1 article figure {
+    margin: 1em auto;
+}
+
+#project1 article img {
+    max-width: 100%;
+}
+
+#project1 .galleryImages {
+    display: flex;
+    flex-wrap: wrap;
+}
+#project1 .galleryImages h2 {
+    flex: 0 1 100%;
+}
+
+#project1 .galleryImages figure {
+    max-height: 100px;
+    overflow: hidden;
+    max-width: 100px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+#project1 .galleryImages figcaption, #project1 .galleryImages figcaption:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--palette-color-100);
+    font-size: 15px;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    content: '';
+
+    padding: 0.5em;
+}
+#project1 .galleryImages figcaption, #project1 .galleryImages figcaption:before, #project1 .fullresImage {
+    transform-origin: top;
+    transition: transform 100ms linear;
+}
+
+#project1 .galleryImages figcaption, #project1 .fullresImage {
+    transform: scaleY(0);
+    z-index: 1;
+}
+#project1 .galleryImages .mobileCaption {
+    transform: scaleY(1);
+}
+
+#project1 .galleryImages figure:hover figcaption, #project1 .galleryImages figure:focus figcaption {
+    transform: scaleY(1);
+}
+
+#project1 .galleryImages figcaption:before {
+    background: black;
+    opacity: 0.5;
+    z-index: -1;
+}
+#project1 .galleryImages img {
+    max-height: 150px;
+}
+
+#project1 .fullresImage {
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#project1 .fullresImage h2 {
+    z-index: 2;
+    color: var(--palette-color-500);
+    background: var(--palette-color-100);
+    padding: 0.25em;
+}
+#project1 .fullresImage figure {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    z-index: 2;
+}
+#project1 .fullresImage figcaption {
+    color: var(--palette-color-100);
+    text-align: left;
+}
+
+#project1 .fullresImage img {
+    max-width: 90vw;
+    max-height: 90vh;
+    position: relative;
+}
+
+#project1 .fullresImage .imgLoading {
+    transform: scale(0);
+}
+
+#project1 .fullresImage:before {
+    background-color: black;
+    content: '';
+    height: 100%;
+    width: 100vw;
+    opacity: 0.5;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#project1 .fullresImage span {
+    height: 3em;
+    width: 3em;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin: 1em;
+    z-index: 3;
+}
+
+#project1 .fullresVisible {
+    transform: scaleY(1)
+}
+
+
+.apaCitation li {
+    text-indent: -36px;
+    padding-left: 36px;
+}
+
+#project1 .apaCitation a {
+    text-decoration: underline;
+}
+
+#project1 .references {
+    padding: 1em;
+}
+
+#project1 footer {
+    position: absolute;
+    left: 0;
+    height: 8em;
+    width: 100vw;
+    background-color: var(--palette-color-900);
+    color: var(--palette-color-700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    letter-spacing: 0.125em;
+    font-size: 18pt;
+    padding: 2em;
+    text-align: center;
+}
+#project1 .anchorFooter {
+    bottom: 0;
+}
+
+@media only screen and (min-width: 550px) {
+    #homePage header h1 {
+        font-size: 32px;
+        margin: 0;
+    }
+    #homePage header img {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+    #project1 article {
+        margin: 1em auto;
+    }
+    .twoColumns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5em;
+        justify-content: space-evenly;
+        width: 100%;
+        grid-template-areas:
+        "h2 h2"
+        ". ."
+        ". .";
+    }
+}
+@media only screen and (max-width: 450px) {
+    #project1 section:first-of-type {
+        padding-top: 10.75em;
+    }
+}
