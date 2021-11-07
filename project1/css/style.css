@@ -5,6 +5,12 @@ body {
     color: white;
 }
 
+h1 {
+    text-align: center;
+    margin: 1em auto;
+    letter-spacing: 0.125ch;
+}
+
 main {
     margin: auto;
     padding: 5em;
