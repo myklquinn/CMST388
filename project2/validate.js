@@ -2,10 +2,12 @@
 const errMsg = document.createElement("span");
 errMsg.className = 'errorMessage';
 
-function validateForm() {
+function clearErrors() {
     document.querySelectorAll(".errorMessage").forEach((a)=>{a.remove()});
     document.querySelectorAll(".validationError").forEach((a)=>{a.classList.remove("validationError")});
+}
 
+function validateForm() {
     let firstName = textField("#fname");
     let lastName = textField("#lname");
     let address = textField("#address");
@@ -191,4 +193,8 @@ function contactField() {
     } else {
         return true
     }
+}
+
+{
+    document.querySelector(`input[type='reset']`).addEventListener("click", clearErrors)
 }
