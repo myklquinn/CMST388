@@ -19,7 +19,7 @@ function validateForm() {
     if (!firstName || !lastName || !address || !city || !state || !zipcode || !phone || !email || !contact) {
         return false;
     } else {
-        return false;
+        return true;
     }
 }
 
