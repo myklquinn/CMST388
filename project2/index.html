@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <script src="validate.js" defer></script>
+    <title>CMST 388 - Mykl Quinn - Project 2</title>
+</head>
+<body>
+    <main>
+        <form action="https://formsubmit.co/myklquinn@gmail.com" onsubmit="return validateForm()" method="post">
+            <input type="hidden" name="_next" value="thankyou.html">
+            <input type="hidden" name="_subject" value="CMST388 Project2">
+            <fieldset class="mainForm">
+                <legend>Registration Form</legend>
+                <label for="fname">First Name:</label>
+                <div>
+                    <input type="text" id="fname" name="fname">
+                </div>
+                <label for="lname">Last Name</label>
+                <div>
+                    <input type="text" id="lname" name="lname">
+                </div>
+                <label for="address">Address:</label>
+                <div>
+                    <input type="text" id="address" name="address">
+                </div>
+                <label for="city">City:</label>
+                <div>
+                    <input type="text" id="city" name="city">
+                </div>
+                <label for="state">State:</label>
+                <div>
+                    <div class="select">
+                        <select id="state" name="state">
+                            <option value="" disabled selected hidden>Select a state</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="AA">Armed Forces Americas</option>
+                            <option value="AE">Armed Forces Europe</option>
+                            <option value="AP">Armed Forces Pacific</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District Of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                        <span class="focus"></span>                  
+                    </div>
+                </div>
+                <label for="zipcode">Zipcode:</label>
+                <div>
+                    <input type="text" id="zipcode" name="zipcode" maxlength="5">
+                </div>
+                <label for="areacode">Phone:</label>
+                <div class="phoneNumber">
+                    <div><input type="tel" id="areacode" name="areacode" maxlength="3"></div>
+                    <div><input type="tel" id="phone" name="phone" maxlength="8"></div>
+                </div>
+                <label for="email1">Email:</label>
+                <div>
+                    <input type="email" id="email1" name="email1">
+                </div>
+                <label for="email2">Confirm Email:</label>
+                <div>
+                    <input type="email" id="email2" name="email2">
+                </div>
+                <div class="groupLabel">Meal:</div>
+                <div class="choiceGp">
+                    <label class="container">Vegan
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Vegetarian
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Non-Vegetarian
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="groupLabel">
+                    Contact Method:<br/>
+                    <small>(select more than one)</small>
+                </div>
+                <div class="choiceGp">
+                    <label class="container2">Phone
+                        <input type="checkbox" checked="checked" name="contact" value="Phone">
+                        <span class="checkmark2"></span>
+                    </label>
+                    <label class="container2">Email
+                        <input type="checkbox" name="contact" value="Email">
+                        <span class="checkmark2"></span>
+                    </label>
+                    <label class="container2">Mail
+                        <input type="checkbox" name="contact" value="Mail">
+                        <span class="checkmark2"></span>
+                    </label>
+                    <label class="container2">LinkedIn
+                        <input type="checkbox" name="contact" value="LinkedIn">
+                        <span class="checkmark2"></span>
+                    </label>
+                </div>
+                <label for="comments">Comments:</label>
+                <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+            </fieldset>
+            <div class="buttonArea">
+                <span></span>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
