@@ -168,7 +168,12 @@ function emailField() {
     } else if (emailVal2 && !emailValid2) {
         emailFormatError(emailParent2);
     }
-    if (emailValid1 && emailValid2 && emailValid1 == emailValid2) {
+
+    if (emailValid1 && emailValid2 && emailVal1 !== emailVal2) {
+        emailMatchError(emailParent2);
+    } 
+    
+    if (emailValid1 && emailValid2 && emailVal1 == emailVal2) {
         return true;
     } else {
         return false;
