@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="event_registration.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1><img src="imgs/umgc_logo.svg" title="UMGC Logo">2021 Alumni Gala Event - Metaverse, USA</h1>
+        <div class="infoBlock" id="counter">
+            <h2>Ticket Purchase</h2>
+            <p>Please join us for the 2021 Alumni Gala in Metaverse, USA at the fabulous Vermobile Virtual Center on December 15, 2021. You're just one step away from securing your tickets to this year's gala. Tickets are <strong>$14.99</strong> each, with a maximum of three tickets per transaction. Please compelete the form below, and we look forward to seeing you soon.</p>
+            You have <span id="timeRemaining"></span> time remaining to complete this transaction.</div>
+        <form class="infoBlock" id='idForm' onsubmit="return validateForm()">
+            <fieldset>
+                <legend>Alumni Event Registration</legend>
+                <div>
+                    <label for="tickets"># Tickets (Limit 3):</label>
+                    <input type="text" name="tickets" id="tickets" value="0" />
+                </div>
+                <div>
+                    <label for="cost">Total Cost:</label>
+                    <input type="text" name="cost" id="cost"  default-value="" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" placeholder="$0" disabled />
+                </div>
+                <div class="contactInfo contactHidden">
+                    <label for="name">Full Name:</label>
+                    <input type="text" name="name" id="name"  default-value="" />
+                </div>
+                <div class="contactInfo contactHidden">
+                    <label for="email">Email Address:</label>
+                    <input type="email" name="email" id="email"  default-value="" >
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </fieldset>
+        </form>
+        <section id="timeOver" class="infoBlock infoHidden">
+            <h2>You have exceeded the maximum allowed transaction time. You will be redirected back to the purchase form in five seconds.</h2>
+        </section>
+        <section id="purchaseComplete" class="infoBlock infoHidden">
+            <h2>Thank you for your purchase.</h2>
+            <p>You have ordered <span id="ticketCount"></span> tickets for a total cost of <span id="totalAmount"></span>.</p>
+            <p>A receipt and confirmation have been sent to the email provided.</p>
+        </section>
+    </main>
+</body>
+</html>

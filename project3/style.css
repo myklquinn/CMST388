@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+}
+main {
+    margin-top: 2em;
+}
+
+main > *{
+    max-width: 50vw;
+    margin: 0 auto;
+}
+main img {
+    max-width: 2em;
+    max-height: 2em;
+    padding-right: 0.5rem;
+}
+h1 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+fieldset {
+    display: grid;
+    max-width: fit-content;
+    grid-template-columns: auto;
+    min-width: calc(50vw - 1em);
+    margin-top: 1em;
+}
+fieldset div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    padding: 0.5em;
+    width: 100%;
+}
+label {
+    padding: 0.25em 0.5em;
+}
+input:not([type="submit"]):not([type="reset"]) {
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+}
+
+.validationError {
+    grid-column: 1/-1;
+    /* position: relative;
+    display: flex;
+    flex-flow: column; */
+}
+.validationError input, .validationError .select {
+    border: 2px solid red;
+    background: rgba(255, 0, 0, 0.3);
+    max-width: 100%;
+}
+
+.validationError:focus-within > input {
+    border: 2px solid var(--focus);
+}
+
+.errorMessage {
+    grid-column: 1/-1;
+    color: red;
+    font-style: italic;
+    font-size: 0.75rem;
+    margin: 0 0.5em;
+}
+.contactInfo {
+    transition: all ease-in 150ms;
+    transform: scaleY(1);
+    max-height: fit-content;
+    overflow: hidden;
+}
+
+.contactHidden {
+    transform: scaleY(0);
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+}
+#timeRemaining {
+    color: red;
+    font-weight: 700;
+}
+
+.infoBlock {
+    transition: all ease-in 150ms;
+    transform: scaleY(1);
+    transform-origin: top;
+    max-height: fit-content;
+    overflow: hidden;
+}
+.infoHidden {
+    transform: scaleY(0);
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+input:not([disabled]):hover {
+    box-shadow: 0 0 5px currentColor;
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        background: #333; 
+        color: white;
+    }
+}
+  
+@media (prefers-color-scheme: light) {
+    * { 
+        background: white;
+        color:  #555;
+    }
+}
